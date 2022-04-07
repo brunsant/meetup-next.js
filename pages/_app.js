@@ -10,3 +10,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+// place to do changes that should show on the whole app
