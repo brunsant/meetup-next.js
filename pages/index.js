@@ -1,32 +1,19 @@
+import { Fragment } from "react";
+import Head from "next/head";
 import MeetupList from "../components/meetups/MeetupList";
 import { MongoClient } from "mongodb";
 
-const DUMMY_MEETUPS = [
-  {
-    id: "m1",
-    title: "Fist meetup",
-    image: "https://picsum.photos/200",
-    address: "street one",
-    description: " first meetup!",
-  },
-  {
-    id: "m2",
-    title: "Second meetup",
-    image: "https://picsum.photos/200",
-    address: "street two",
-    description: " second meetup!",
-  },
-  {
-    id: "m3",
-    title: "Thirs meetup",
-    image: "https://picsum.photos/200",
-    address: "street three",
-    description: " third meetup!",
-  },
-];
-
 function HomePage(props) {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Brunas Meetup Next.js page</title>
+        <meta name="description" content="Browse a list of tech meetings" />
+        {/* Info that shows on google when people use the searching tool */}
+      </Head>
+      <MeetupList meetups={props.meetups} />;
+    </Fragment>
+  );
 }
 
 export async function getStaticProps() {
