@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "proxy": "http://localhost:3000",
   "dependencies": {
+    "mongodb": "^4.5.0",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
