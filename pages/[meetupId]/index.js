@@ -16,7 +16,7 @@ function MeetupDetails(props) {
         title={props.meetupData.title}
         address={props.meetupData.address}
         description={props.meetupData.description}
-      />{" "}
+      />
     </Fragment>
   );
 }
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 
   return {
     //fallback inform that not all id are hard coded, so it will try to find the next ones automatically. false would say only those id should work
-    fallback: true,
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
